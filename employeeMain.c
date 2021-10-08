@@ -33,6 +33,20 @@ int main(void)
         printf("Employee Tony Bobcat is in record %d\n", matchPtr - EmployeeTable);
     else
         printf("Employee Tony Bobcat is NOT found in the record\n");
+    
+    // search by phone
+    matchPtr = searchEmployeeByPhone(EmployeeTable, EmployeeTableEntries, "909-555-2134");
+    if (matchPtr != NULL)
+        printf("Employee with 909-555-2134 is in record %d\n", matchPtr - EmployeeTable);
+    else
+        printf("Employee with 909-555-2134 is NOT found in the record\n");  
+
+    // search by salary
+    matchPtr = searchEmployeeByNumber(EmployeeTable, EmployeeTableEntries, 8.78);
+    if (matchPtr != NULL)
+        printf("Employee salary with 8.78 is in record %d\n", matchPtr - EmployeeTable);
+    else
+        printf("Employee salary with 8.78 is NOT found in the record\n");
   
     
     return EXIT_SUCCESS;
